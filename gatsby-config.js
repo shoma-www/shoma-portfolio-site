@@ -4,6 +4,7 @@ module.exports = {
     description: 'ポートフォリオサイトです。',
     author: '@shumai',
   },
+  pathPrefix: '/img',
   plugins: [
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',

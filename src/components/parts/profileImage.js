@@ -2,14 +2,15 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Color from '../../const/color';
 
 const ProfileImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "profile_icon.png" }) {
+        placeholderImage: file(relativePath: { eq: "manifest-icon.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1080) {
+            fluid(maxWidth: 180) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -24,9 +25,8 @@ const ProfileImage = () => (
 export default ProfileImage;
 
 const CircleImage = styled(Img)`
-  width: 15rem;
+  width: 180px;
+  border: solid 5px ${Color.ProfileFrame};
   border-radius: 50%;
-  margin: 0.5rem;
-  display: inline-block;
-  vertical-align: middle;
+  margin: 0 2rem;
 `;
