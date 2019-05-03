@@ -6,17 +6,17 @@ import Font from '../../const/font';
 export default () => {
   return (
     <NewFooter>
-      <FotterName>© 2019 Shoma</FotterName>
+      <FooterName>© 2019 Shoma</FooterName>
     </NewFooter>
   );
 };
 
 const NewFooter = styled.footer`
   height: 50px;
-  background-color: ${Color.FontColor};
+  background-color: ${Color.Thema};
 `;
 
-const FotterName = styled.p`
+const FooterName = styled.p`
   color: white;
   font-size: 1.5rem;
   font-family: ${Font.yuMincho};

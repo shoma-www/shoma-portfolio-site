@@ -16,7 +16,7 @@ const SkillBox = styled.div`
   height: 175px;
   padding: 15px;
   margin: 5px;
-  border: solid 5px ${Color.SkillFrame};
+  border: solid 5px ${Color.SkillThema};
   border-radius: 20px;
 `;
 
@@ -29,12 +29,12 @@ const Icon = styled.img`
 const ProgressContainer = styled.div`
   height: 20px;
   border-radius: 15px;
-  background-color: ${Color.SkillFrame};
+  background-color: ${Color.ProgressContainer};
 `;
 
 const ProgressBar = styled.div`
   height: 100%;
   border-radius: 15px;
   width: ${props => props.level};
-  background-color: ${Color.MainRed};
+  background-color: ${Color.Progress};
 `;

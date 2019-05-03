@@ -72,18 +72,18 @@ const SkillSet = ({name, list}) => (
 const SkillBox = styled.div`
   width: 500px;
   margin: 10px;
-  border: solid 4px ${Color.SkillFrame};
+  border: solid 4px ${Color.SkillThema};
 `;
 
 const SkillTitle = styled.div`
   width: 100%;
   height: 50px;
-  background-color: ${Color.SkillFrame};
+  background-color: ${Color.SkillThema};
   text-align: center;
 `;
 
 const SkillName = styled.h2`
-  Color: white;
+  Color: ${Color.SkillTitleFont};
   font-size: 2rem;
   font-family: ${Font.yuGothic};
   padding: 5px 0;

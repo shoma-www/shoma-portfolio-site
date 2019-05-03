@@ -10,12 +10,12 @@ import WorksSection from '../components/sectionpage/worksSection';
 import FooterSection from '../components/sectionpage/footerSection';
 
 const NavItems = [
-  {name: 'Home', url: '/testPage#top'},
-  {name: 'About', url: '/testPage#about'},
-  {name: 'Skill', url: '/testPage#skill'},
-  {name: 'Works', url: '/testPage#works'},
+  {name: 'Home', url: '#top'},
+  {name: 'About', url: '#about'},
+  {name: 'Skill', url: '#skill'},
+  {name: 'Works', url: '#works'},
   {name: 'Blog', url: '/blog'},
-  {name: 'Contact', url: '/testPage#contact'},
+  {name: 'Contact', url: '#contact'},
 ];
 
 class TestPage extends React.Component {

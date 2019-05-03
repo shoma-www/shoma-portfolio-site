@@ -13,7 +13,7 @@ export default (props) => {
 };
 
 const CommonSection = styled.section`
-  color: ${Color.FontColor};
+  color: ${Color.Thema};
   font-family: ${Font.yuGothic};
   font-size: 1.4rem;
   width: 100vw;
@@ -24,7 +24,7 @@ const CommonSection = styled.section`
     font-family: ${Font.yuGothic};
     font-size: 3rem;
     font-weight: 100;
-    border-bottom: solid 2px ${Color.FontColor};
+    border-bottom: solid 2px ${Color.Thema};
     margin-top: 1rem;
     margin-bottom: 2rem;
     text-align: center;

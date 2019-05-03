@@ -15,7 +15,7 @@ export default ({ isFixed=true, isVisible='open', title='', navItems=[] }) => {
         pose={isVisible}
         isFixed={isFixed}
       >
-        <SidebarIcon color={Color.FontColor} onClick={() => toggle(!isOpen)} />
+        <SidebarIcon color={Color.Thema} onClick={() => toggle(!isOpen)} />
         <HeaderTitle>{title}</HeaderTitle>
         <div />
       </Header>
@@ -60,18 +60,18 @@ const Header = styled(TopFadeIn)`
         position: fixed;
         top: 0;
         box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-        background-color: white;
+        background-color: ${Color.Header};
         z-index: 10;
       `:
       css`
         position: absolute;
         top: 0;
-        background-color: rgba(255, 255, 255, 0.0);
+        background-color: rgba(0, 0, 0, 0.0);
       `};
 `;
 
 const HeaderTitle = styled.h1`
-  color: ${Color.FontColor};
+  color: ${Color.Thema};
   font-family: ${Font.yuMincho};
   font-weight: 500;
   margin: 0;

@@ -26,7 +26,7 @@ export default ProfileImage;
 
 const CircleImage = styled(Img)`
   width: 180px;
-  border: solid 5px ${Color.ProfileFrame};
+  border: solid 5px ${Color.Thema};
   border-radius: 50%;
   margin: 0 2rem;
 `;

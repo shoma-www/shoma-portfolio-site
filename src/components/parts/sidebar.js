@@ -54,7 +54,7 @@ const NavBase = posed.nav({
 const Nav = styled(NavBase)`
   font-family:  ${Font.yuMincho};
   font-weight: 500;
-  background: ${Color.SideBackground};
+  background: ${Color.SideMenuBack};
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -73,7 +73,6 @@ const NavListBase = posed.ul({
 
 const NavList = styled(NavListBase)`
   flex-grow: 1;
-  background: ${Color.SideBackground};
   margin: 0;
   list-style: none;
   text-align: center;
@@ -99,7 +98,7 @@ const NavItemBase = posed.li({
 
 const NavItem = styled(NavItemBase)`
   font-size: 1.5rem;
-  color: white;
+  color: ${Color.SideMenuFont};
   text-decoration: none;
   padding: 20px 80px;
   cursor: pointer;
@@ -115,5 +114,5 @@ const CoverPage = styled.div`
   top: 0;
   left: 0;
   z-index: 90;
-  background-color: ${Color.Modal};
+  background-color: ${Color.SideMenuModal};
 `;
