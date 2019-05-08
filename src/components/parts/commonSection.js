@@ -17,7 +17,7 @@ const CommonSection = styled.section`
   font-family: ${Font.yuGothic};
   font-size: 1.4rem;
   width: 100vw;
-  padding: 50px 40px 0;
+  padding: 50px 40px 20px;
   margin: 0 auto;
 
   .header {

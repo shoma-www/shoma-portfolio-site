@@ -1,16 +1,18 @@
 export default {
   Thema: '#708090',
   Header: '#FFFFFF',
-
-  // SideMenu
-  SideMenuBack: '#FD4364',
-  SideMenuModal: 'rgba(0, 0, 0, 0.5)',
-  SideMenuFont: '#FFFFFF',
+  BackThemae: '#FFFFFF',
+  
+  // SideBar
+  SideBarBack: '#FD4364',
+  SideBarFont: '#FFFFFF',
+  Modal: 'rgba(0, 0, 0, 0.5)',
 
   // Skill
   SkillThema: '#708090',
-  SkillTitleFont: 'white',
+  SkillTitleFont: '#FFFFFF',
+  SkillWorkUsed: 'red',
   // SkillIconProgressBar
-  ProgressContainer: '#708090',
+  ProgressContainer: '#B4CEE8',
   Progress: '#FD4364',
 };

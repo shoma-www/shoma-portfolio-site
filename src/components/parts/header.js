@@ -54,6 +54,7 @@ const Header = styled(TopFadeIn)`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 10;
   ${props =>
     props.isFixed ?
       css`
@@ -61,7 +62,6 @@ const Header = styled(TopFadeIn)`
         top: 0;
         box-shadow: 0 5px 5px rgba(0,0,0,0.2);
         background-color: ${Color.Header};
-        z-index: 10;
       `:
       css`
         position: absolute;

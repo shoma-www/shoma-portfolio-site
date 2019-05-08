@@ -48,7 +48,6 @@ const query = graphql`
 const HeaderImg = styled(BackgroundImage)`
   height: 100vh;
   width: 100vw;
-  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;

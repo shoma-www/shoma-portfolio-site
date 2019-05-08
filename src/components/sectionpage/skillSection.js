@@ -1,43 +1,45 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from '../../const/color';
-import Font from '../../const/font';
 import CommonSection from '../parts/commonSection';
-import SkillIcon from '../parts/skillIcon';
+import SkillSet from '../parts/skillSet';
 
 const backendList = [
-  {skill:'C_Sharp' ,level: '75%'},
-  {skill:'dotnet' ,level: '35%'},
+  {skill:'C_Sharp', level: '75%', used: true},
+  {skill:'dotnet' ,level: '35%', used: true},
   {skill:'python' ,level: '35%'},
-  {skill:'oracle' ,level: '50%'},
 ];
 
 const frontendList = [
   {skill:'html-5' ,level: '25%'},
   {skill:'css-3' ,level: '25%'},
-  {skill:'javascript' ,level: '35%'},
-  {skill:'react' ,level: '35%'},
+  {skill:'javascript' ,level: '35%', used: true},
+  {skill:'react' ,level: '35%', used: true},
   {skill:'gatsby' ,level: '35%'},
 ];
 
+const dbList = [
+  {skill:'oracle' ,level: '50%', used: true},
+  {skill:'postgresql' ,level: '25%'},
+];
+
 const othersList = [
-  {skill:'subversion' ,level: '50%'},
+  {skill:'subversion' ,level: '50%', used: true},
   {skill:'git' ,level: '25%'},
-  {skill:'visual-studio-code' ,level: '35%'},
+  {skill:'visual-studio-code' ,level: '35%', used: true},
 ];
 
 export default () => {
   return (
     <CommonSection id='skill' title='Skill'>
       <TextArea>
-        触ったことのあるスキルの一覧です。
-        業務で使ってたのは、C#とOracle 11g、あとはReactです。
-        このサイトはGatsbyで作ってます。
-        バーが長いほど経験があります。
+        業務／自習問わず触ったことのあるスキルの一覧です。<br />
+        業務で使っていたのは、赤枠で表しています。<br />
+        このサイトはGatsbyで作ってます。バーが長いほど経験があります。
       </TextArea>
       <Container>
         <SkillSet name='Backend' list={backendList} />
         <SkillSet name='Frontend' list={frontendList} />
+        <SkillSet name='DB' list={dbList} />
         <SkillSet name='Others' list={othersList} />
       </Container>
     </CommonSection>
@@ -50,51 +52,11 @@ const TextArea = styled.p`
 `;
 
 const Container = styled.div`
-  max-width: 1080px;
+  max-width: 765px;
   margin: auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: stretch;
 `;
 
-const SkillSet = ({name, list}) => (
-  <SkillBox>
-    <SkillTitle>
-      <SkillName>{name}</SkillName>
-    </SkillTitle>
-    <SkillIcons>
-      {list.map(item => <SkillIcon key={item.skill} skill={item.skill} level={item.level} />)}
-    </SkillIcons>
-  </SkillBox>
-);
-
-const SkillBox = styled.div`
-  width: 500px;
-  margin: 10px;
-  border: solid 4px ${Color.SkillThema};
-`;
-
-const SkillTitle = styled.div`
-  width: 100%;
-  height: 50px;
-  background-color: ${Color.SkillThema};
-  text-align: center;
-`;
-
-const SkillName = styled.h2`
-  Color: ${Color.SkillTitleFont};
-  font-size: 2rem;
-  font-family: ${Font.yuGothic};
-  padding: 5px 0;
-`;
-
-const SkillIcons = styled.div`
-  width: 100%;
-  padding: 10px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: center;
-`;

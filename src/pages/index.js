@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../components/parts/header';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Observer from 'react-intersection-observer';
+import Color from '../const/color';
 import TopSection from '../components/sectionpage/topSection';
 import AboutSection from '../components/sectionpage/aboutSection';
 import ContactSection from '../components/sectionpage/contactSection';
@@ -64,6 +65,6 @@ class TestPage extends React.Component {
 export default TestPage;
 
 const Body = styled.div`
-  height: 2000px;
+  background-color: ${Color.BackThemae};
   overflow-y: visible;
 `;

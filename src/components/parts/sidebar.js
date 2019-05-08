@@ -5,7 +5,7 @@ import { navigate } from 'gatsby';
 import Color from '../../const/color';
 import Font from '../../const/font';
 
-const SideBar = ({ isOpen, navItems, onClick }) => (
+export default ({ isOpen, navItems, onClick }) => (
   <Contents>
     <Nav pose={isOpen ? 'open' : 'closed'} onClick={onClick} >
       <NavList>
@@ -21,8 +21,6 @@ const SideBar = ({ isOpen, navItems, onClick }) => (
     }
   </Contents>
 );
-
-export default SideBar;
 
 const ModalScroll = createGlobalStyle`
   body {
@@ -54,7 +52,7 @@ const NavBase = posed.nav({
 const Nav = styled(NavBase)`
   font-family:  ${Font.yuMincho};
   font-weight: 500;
-  background: ${Color.SideMenuBack};
+  background: ${Color.SideBarBack};
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -98,9 +96,9 @@ const NavItemBase = posed.li({
 
 const NavItem = styled(NavItemBase)`
   font-size: 1.5rem;
-  color: ${Color.SideMenuFont};
+  color: ${Color.SideBarFont};
   text-decoration: none;
-  padding: 20px 80px;
+  padding: 20px 50px;
   cursor: pointer;
   :hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -114,5 +112,5 @@ const CoverPage = styled.div`
   top: 0;
   left: 0;
   z-index: 90;
-  background-color: ${Color.SideMenuModal};
+  background-color: ${Color.Modal};
 `;
