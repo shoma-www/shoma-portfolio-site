@@ -22,7 +22,7 @@
         "semi": ["error", "always"],
         "semi-spacing": ["error", {"before": false, "after": false}],
         "semi-style": ["error", "last"],
-        "react/jsx-uses-react": "error",   
+        "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "linebreak-style": ["error", "windows"]
     }
