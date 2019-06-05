@@ -7,7 +7,7 @@ import TopSection from '../components/sectionpage/topSection';
 import AboutSection from '../components/sectionpage/aboutSection';
 import ContactSection from '../components/sectionpage/contactSection';
 import SkillSection from '../components/sectionpage/skillSection';
-import WorksSection from '../components/sectionpage/worksSection';
+import WorkSection from '../components/worksection';
 import FooterSection from '../components/sectionpage/footerSection';
 
 const NavItems = [
@@ -55,7 +55,7 @@ class TestPage extends React.Component {
 
         <AboutSection />
         <SkillSection />
-        <WorksSection />
+        <WorkSection />
         <ContactSection />
         <FooterSection />
       </>
