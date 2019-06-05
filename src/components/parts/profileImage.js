@@ -8,7 +8,7 @@ const ProfileImage = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "manifest-icon.png" }) {
+        placeholderImage: file(relativePath: { eq: "SleepingChibi.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 180) {
               ...GatsbyImageSharpFluid
@@ -17,7 +17,7 @@ const ProfileImage = () => (
         }
       }
     `}
-    render={data => 
+    render={data =>
       <CircleImage critical fluid={data.placeholderImage.childImageSharp.fluid} />
     }
   />
@@ -25,6 +25,7 @@ const ProfileImage = () => (
 export default ProfileImage;
 
 const CircleImage = styled(Img)`
+  position: static;
   width: 180px;
   border: solid 5px ${Color.Thema};
   border-radius: 50%;

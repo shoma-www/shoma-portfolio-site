@@ -6,15 +6,15 @@ import SkillSet from '../parts/skillSet';
 const backendList = [
   {skill:'C_Sharp', level: '75%', used: true},
   {skill:'dotnet' ,level: '35%', used: true},
-  {skill:'python' ,level: '35%'},
+  {skill:'python' ,level: '25%'},
 ];
 
 const frontendList = [
   {skill:'html-5' ,level: '25%'},
   {skill:'css-3' ,level: '25%'},
-  {skill:'javascript' ,level: '35%', used: true},
-  {skill:'react' ,level: '35%', used: true},
-  {skill:'gatsby' ,level: '35%'},
+  {skill:'javascript' ,level: '25%', used: true},
+  {skill:'react' ,level: '25%', used: true},
+  {skill:'gatsby' ,level: '25%'},
 ];
 
 const dbList = [
@@ -25,7 +25,7 @@ const dbList = [
 const othersList = [
   {skill:'subversion' ,level: '50%', used: true},
   {skill:'git' ,level: '25%'},
-  {skill:'visual-studio-code' ,level: '35%', used: true},
+  {skill:'visual-studio-code' ,level: '40%', used: true},
 ];
 
 export default () => {

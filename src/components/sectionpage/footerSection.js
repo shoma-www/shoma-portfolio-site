@@ -12,6 +12,7 @@ export default () => {
 };
 
 const NewFooter = styled.footer`
+  width: 100vw;
   height: 50px;
   background-color: ${Color.Thema};
 `;

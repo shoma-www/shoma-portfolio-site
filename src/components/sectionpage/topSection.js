@@ -46,7 +46,7 @@ const query = graphql`
 `;
 
 const HeaderImg = styled(BackgroundImage)`
-  height: 100vh;
+  height: 600px;
   width: 100vw;
   display: flex;
   justify-content: center;

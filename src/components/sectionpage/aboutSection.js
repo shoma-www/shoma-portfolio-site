@@ -16,7 +16,6 @@ export default () => {
             金融向けシステムを開発するSIerに就職しました。
             入社してから証券システムの保守／開発（バッチ／Web画面）をやってました。
             設計～テストまで一通りは経験しています。
-            
           </TextArea>
         </ContentArea>
         <ProfileImage />

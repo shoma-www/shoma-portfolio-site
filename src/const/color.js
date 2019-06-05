@@ -2,9 +2,9 @@ export default {
   Thema: '#708090',
   Header: '#FFFFFF',
   BackThemae: '#FFFFFF',
-  
+
   // SideBar
-  SideBarBack: '#FD4364',
+  SideBarBack: '#708090',//'#FD4364',
   SideBarFont: '#FFFFFF',
   Modal: 'rgba(0, 0, 0, 0.5)',
 

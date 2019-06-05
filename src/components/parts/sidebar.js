@@ -40,7 +40,7 @@ const NavBase = posed.nav({
       duration: 300
     }
   },
-  closed: { 
+  closed: {
     x: '-100%',
     transition: {
       ease: 'easeOut',
@@ -98,7 +98,7 @@ const NavItem = styled(NavItemBase)`
   font-size: 1.5rem;
   color: ${Color.SideBarFont};
   text-decoration: none;
-  padding: 20px 50px;
+  padding: 20px 70px;
   cursor: pointer;
   :hover {
     background-color: rgba(0, 0, 0, 0.1);
@@ -106,11 +106,12 @@ const NavItem = styled(NavItemBase)`
 `;
 
 const CoverPage = styled.div`
-  width: 100vw;
   height: calc(100vh * 1.2);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 90;
+  right: 0;
+  bottom: 0;
   background-color: ${Color.Modal};
+  z-index: 90;
 `;

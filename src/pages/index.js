@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/parts/header';
-import styled from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 import Observer from 'react-intersection-observer';
 import Color from '../const/color';
 import TopSection from '../components/sectionpage/topSection';
@@ -33,9 +33,10 @@ class TestPage extends React.Component {
   render() {
     const { visibility } = this.state;
     const title = 'Shoma\'s Portfolio';
-    
+
     return (
-      <Body>
+      <>
+        <GlobalStyles/>
         <Header
           navItems={NavItems}
           isFixed={false}
@@ -49,7 +50,7 @@ class TestPage extends React.Component {
         <Observer onChange={this.handleView}>
           <TopSection title={title} subTitele={'やる気はいつも遅刻気味'} />
         </Observer>
-        
+
         <div style={{margin: '1px'}} />
 
         <AboutSection />
@@ -57,14 +58,19 @@ class TestPage extends React.Component {
         <WorksSection />
         <ContactSection />
         <FooterSection />
-      </Body>
+      </>
     );
   }
 }
 
 export default TestPage;
 
-const Body = styled.div`
-  background-color: ${Color.BackThemae};
-  overflow-y: visible;
+
+const GlobalStyles = createGlobalStyle`
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: ${Color.BackThemae};
+  }
 `;
