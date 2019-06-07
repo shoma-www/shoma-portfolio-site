@@ -1,35 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { Icon } from 'semantic-ui-react';
 import Modal from './modal';
-import Font from '../../const/font';
+import Color from '../../const/color';
 
-export default function ({onClick, title, isZoomed, details}) {
+export default function (
+  {onClick, isZoomed, images, title='', details=[], icons=[], language='', explain=()=>(<></>)}) {
+
+  const detailsImages = images
+    .filter(image => details.includes(image.node.fluid.originalName))
+    .map(image => image.node.fluid);
+
   return (
     <Modal onClick={onClick} isZoomed={isZoomed}>
-      <Title>
-        {title}
-      </Title>
       <ThumbContent>
-        {details.map(image =>
-          <ExplainThumb key={image.originalName} fluid={image} />
+        {detailsImages.map((detail, index) =>
+          <ExplainThumb key={index} fluid={detail} />
         )}
       </ThumbContent>
-      <Separator />
       <ExplainContent>
-        <p>あいうえお</p>
+        <Title>
+          {title}
+          {icons.map((icon, index) =>
+            <MiniIcon
+              key={index}
+              href={icon.href}
+              name={icon.name}
+            />
+          )}
+        </Title>
+        <ProgramText>言語：{language}</ProgramText>
+        <ExplainText>
+          { explain() }
+        </ExplainText>
       </ExplainContent>
     </Modal>
   );
 }
 
 const Title = styled.h1`
-  font-family: ${Font.yuMincho};
+  border-bottom: solid 1px black;
+  font-size: 1.6rem;
   margin: 0;
 `;
 
+const ProgramText = styled.p`
+  font-size: 1.2rem;
+`;
+
+const ExplainText = styled.p`
+  font-size: 1.2rem;
+`;
+
 const ThumbContent = styled.div`
-  height: 55%;
+  height: 60%;
   overflow-y: auto;
 `;
 
@@ -37,12 +62,30 @@ const ExplainThumb = styled(Img)`
   max-width: 600px;
 `;
 
-const Separator = styled.span`
-  border-bottom: solid 1px gray;
-  border-top: solid 1px black;
-  margin: 8px 0;
+const ExplainContent = styled.div`
+  margin: 10px 0;
 `;
 
-const ExplainContent = styled.div`
+const MiniIcon = ({href, name}) => (
+  <MiniLink
+    href={href}
+    target='_blank'
+    rel="noreferrer noopener"
+  >
+    <Icon name={name} />{name}
+  </MiniLink>
+);
 
+const MiniLink = styled.a`
+  border-radius: 5px;
+  color: ${Color.Thema};
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 10px;
+  padding: 0 3px;
+  :hover {
+    background-color: ${Color.Thema};
+    color: white;
+  }
 `;

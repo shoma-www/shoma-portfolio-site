@@ -15,7 +15,7 @@ export default function ({children, onClick, isZoomed}) {
     <ModalBackContainer pose={pose} onClick={onClick}>
       {(isZoomed)&&<ProhibitedScroll />}
       <ModalWindow onClick={stopEvent}>
-        <Close name='close' onClick={onClick} corner='top righ' />
+        <Close name='close' onClick={onClick} />
         {children}
       </ModalWindow>
     </ModalBackContainer>
@@ -60,13 +60,14 @@ const ModalMotion = posed.div({
 
 const ModalWindow = styled(ModalMotion)`
   background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   left: calc(50% - 320px);
   width: 640px;
   height: 90%;
-  padding: 10px 20px;
+  padding: 20px;
   position: absolute;
   top: 5%;
   i.icon{
@@ -76,5 +77,9 @@ const ModalWindow = styled(ModalMotion)`
 `;
 
 const Close = styled(Icon)`
+  color: grey;
   cursor: pointer;
+  left: 25px;
+  position: relative;
+  top: -20px;
 `;

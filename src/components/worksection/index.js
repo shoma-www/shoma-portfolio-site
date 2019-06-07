@@ -7,17 +7,37 @@ import WorkCard from './workCard';
 const WorkValues = [
   {
     title: 'ポートフォリオサイト',
-    icon: 'Work_Portfolio.jpg',
+    samnail: 'Work_Portfolio.jpg',
     details: [
       'WorkDetail_Portfolio.jpg',
-    ]
+    ],
+    icons: [
+      {
+        name: 'github',
+        href: 'https://github.com/shoma-www/shoma-portfolio-site',
+      },
+      {
+        name: 'home',
+        href: 'http://localhost:8000',
+      }
+    ],
+    language: 'Gatsbyjs/Styled-Components',
+    explain: () => (<>とりあえずなんかつくとこうということで、作った記念すべき１作目。<br />
+    Gatsby自体初めてでしたが、それ以上にデザインとそのスタイルの当て方にかなり苦労しました。
+    ブログ機能を実装しなければ。。。</>),
   },
   {
-    title: 'ポートフォリオサイト2',
-    icon: 'WorkDetail_NoImage.png',
+    title: 'hogefuga',
+    samnail: 'WorkDetail_NoImage.png',
     details: [
       'WorkDetail_NoImage.png',
-    ]
+    ],
+    icons: [
+      {
+      },
+    ],
+    language: 'fugafugafugafuga',
+    explain: () => <>hogehogehohgeohogehogehogehogehoge</>,
   },
 ];
 
@@ -30,18 +50,11 @@ export default () => {
           render={ data =>
             WorkValues.map(work => {
               const images = data.allImageSharp.edges;
-              const iconFluid = images
-                .filter(image => work.icon==image.node.fluid.originalName)[0]
-                .node.fluid;
-              const detailFluds = images
-                .filter(image => work.details.includes(image.node.fluid.originalName))
-                .map(image => image.node.fluid);
               return (
                 <WorkCard
-                  key={work.icon}
-                  title={work.title}
-                  details={detailFluds}
-                  image={iconFluid}
+                  key={work.title}
+                  images={images}
+                  work={work}
                 />
               );
             })

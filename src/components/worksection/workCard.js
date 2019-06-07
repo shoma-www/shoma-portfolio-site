@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import WorkDetailContainer from './workDetailContainer';
 
-export default function({title, image, details}){
+export default function({images, work}){
   const [isZoomed, setZoomed] = useState(false);
 
   const zoomIn = () => {
@@ -16,18 +16,22 @@ export default function({title, image, details}){
 
   const toggle = () => isZoomed ? zoomOut() : zoomIn();
 
+  const smnailImage = images
+    .filter(image => work.samnail==image.node.fluid.originalName)[0]
+    .node.fluid;
+
   return (
     <>
       <WorkDetailContainer
         onClick={zoomOut}
-        title={title}
         isZoomed={isZoomed}
-        details={details}
+        images={images}
+        {...work}
       />
       <WorkContent onClick={toggle}>
-        <WorkIcon fluid={image} />
+        <WorkIcon fluid={smnailImage} />
         <Title>
-          {title}
+          {work.title}
         </Title>
       </WorkContent>
     </>
