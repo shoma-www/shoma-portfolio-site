@@ -5,7 +5,6 @@ import BackgroundImage from 'gatsby-background-image';
 import Color from '../../const/color';
 import Font from '../../const/font';
 
-
 export default ({ title, subTitele }) => {
   return (
     <StaticQuery
@@ -31,7 +30,6 @@ export default ({ title, subTitele }) => {
     />
   );
 };
-
 
 const query = graphql`
   query {
@@ -59,6 +57,7 @@ const Title = styled.span`
   color: white;
   font-weight: bolder;
   font-family: ${Font.yuMincho};
+  line-height: 7rem;
   text-shadow: 2px 2px 2px black;
 `;
 
