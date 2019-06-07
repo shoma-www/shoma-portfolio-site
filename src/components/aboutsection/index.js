@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import ProfileImage from '../parts/profileImage';
+import ProfileImage from './profileImage';
 import CommonSection from '../parts/commonSection';
 
-export default () => {
+export default function () {
   return (
     <CommonSection id='about' title='About'>
-      <Container>
-        <ContentArea>
+      <ProfileContainer>
+        <ProfileText>
           <p style={{textAlign: 'center'}}>
             しょうま
           </p>
@@ -16,28 +16,30 @@ export default () => {
             金融向けシステムを開発するSIerに就職しました。
             入社してから証券システムの保守／開発（バッチ／Web画面）をやってました。
             設計～テストまで一通りは経験しています。
+            ７月から新しい会社でエンジニアする予定です。
           </TextArea>
-        </ContentArea>
+        </ProfileText>
         <ProfileImage />
-      </Container>
+      </ProfileContainer>
     </CommonSection>
   );
-};
+}
 
 
-const Container = styled.div`
+const ProfileContainer = styled.div`
+  align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
 `;
 
-const ContentArea = styled.div`
+const ProfileText = styled.div`
   display: inline-block;
-  width: 480px;
   padding: 20px;
+  width: 480px;
 `;
 
 const TextArea = styled.p`
-  line-height: 2.5rem;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
 `;
