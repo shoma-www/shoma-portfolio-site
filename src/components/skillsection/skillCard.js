@@ -4,38 +4,38 @@ import { withPrefix } from 'gatsby';
 import Color from '../../const/color';
 
 export default ({ skill, level, used }) => (
-  <SkillBox used={used}>
+  <SkillContent used={used}>
     <Icon src={withPrefix(`/img/${skill}.svg`)} alt={skill} />
     <ProgressContainer>
       <ProgressBar level={level} />
     </ProgressContainer>
-  </SkillBox>
+  </SkillContent>
 );
 
-const SkillBox = styled.div`
-  height: 155px;
-  padding: 10px;
-  margin: 3px;
+const SkillContent = styled.div`
+  background-color: white;
   border: solid 4px ${({used}) => used?Color.SkillWorkUsed:Color.SkillThema};
   border-radius: 20px;
-  background-color: white;
+  height: 155px;
+  margin: 3px;
+  padding: 10px;
 `;
 
 const Icon = styled.img`
-  width: 90px;
   height: 90px;
   margin-bottom: 10px;
+  width: 90px;
 `;
 
 const ProgressContainer = styled.div`
-  height: 20px;
-  border-radius: 5px;
   background-color: ${Color.ProgressContainer};
+  border-radius: 5px;
+  height: 20px;
 `;
 
 const ProgressBar = styled.div`
-  height: 100%;
-  border-radius: 5px;
-  width: ${props => props.level};
   background-color: ${Color.Progress};
+  border-radius: 5px;
+  height: 100%;
+  width: ${props => props.level};
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CommonSection from '../parts/commonSection';
-import SkillSet from '../parts/skillSet';
+import SkillCards from './skillCards';
 
 const backendList = [
   {skill:'C_Sharp', level: '75%', used: true},
@@ -28,7 +28,7 @@ const othersList = [
   {skill:'visual-studio-code' ,level: '40%', used: true},
 ];
 
-export default () => {
+export default function(){
   return (
     <CommonSection id='skill' title='Skill'>
       <TextArea>
@@ -36,27 +36,27 @@ export default () => {
         業務で使っていたのは、赤枠で表しています。<br />
         このサイトはGatsbyで作ってます。バーが長いほど経験があります。
       </TextArea>
-      <Container>
-        <SkillSet name='Backend' list={backendList} />
-        <SkillSet name='Frontend' list={frontendList} />
-        <SkillSet name='DB' list={dbList} />
-        <SkillSet name='Others' list={othersList} />
-      </Container>
+      <SkillCardsContainer>
+        <SkillCards name='Backend' list={backendList} />
+        <SkillCards name='Frontend' list={frontendList} />
+        <SkillCards name='DB' list={dbList} />
+        <SkillCards name='Others' list={othersList} />
+      </SkillCardsContainer>
     </CommonSection>
   );
-};
+}
 
 const TextArea = styled.p`
-  width: 680px;
   margin: 0 auto 20px;
+  width: 680px;
 `;
 
-const Container = styled.div`
-  max-width: 765px;
-  margin: auto;
+const SkillCardsContainer = styled.div`
+  align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
-  align-items: stretch;
+  margin: auto;
+  max-width: 765px;
 `;
 
