@@ -9,12 +9,12 @@ export default function () {
       <ProfileContainer>
         <ProfileText>
           <p style={{textAlign: 'center'}}>
-            しょうま
+            しゅうまい
           </p>
           <TextArea>
             　2016年から働き出して４年目です。
             金融向けシステムを開発するSIerに就職しました。
-            入社してから証券システムの保守／開発（バッチ／Web画面）をやってました。
+            入社してから業務エンジニアとして、証券システムの保守／開発（バッチ／Web画面）をやってました。
             設計～テストまで一通りは経験しています。
             ７月から新しい会社でエンジニアする予定です。
           </TextArea>

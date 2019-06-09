@@ -21,7 +21,7 @@ const WorkValues = [
         href: 'http://localhost:8000',
       }
     ],
-    language: 'Gatsbyjs/Styled-Components',
+    language: 'Gatsbyjs / Styled-Components',
     explain: () => (<>とりあえずなんかつくとこうということで、作った記念すべき１作目。<br />
     Gatsby自体初めてでしたが、それ以上にデザインとそのスタイルの当て方にかなり苦労しました。
     ブログ機能を実装しなければ。。。</>),

@@ -67,7 +67,7 @@ const ModalWindow = styled(ModalMotion)`
   left: calc(50% - 320px);
   width: 640px;
   height: 90%;
-  padding: 20px;
+  padding: 30px;
   position: absolute;
   top: 5%;
   i.icon{
@@ -79,7 +79,7 @@ const ModalWindow = styled(ModalMotion)`
 const Close = styled(Icon)`
   color: grey;
   cursor: pointer;
-  left: 25px;
+  left: 30px;
   position: relative;
-  top: -20px;
+  top: -25px;
 `;

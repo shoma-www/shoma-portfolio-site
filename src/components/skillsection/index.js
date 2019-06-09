@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CommonSection from '../parts/commonSection';
-import SkillCards from './skillCards';
+import SkillTypeContainer from './skillTypeContainer';
 
 const backendList = [
   {skill:'C_Sharp', level: '75%', used: true},
@@ -36,27 +36,28 @@ export default function(){
         業務で使っていたのは、赤枠で表しています。<br />
         このサイトはGatsbyで作ってます。バーが長いほど経験があります。
       </TextArea>
-      <SkillCardsContainer>
-        <SkillCards name='Backend' list={backendList} />
-        <SkillCards name='Frontend' list={frontendList} />
-        <SkillCards name='DB' list={dbList} />
-        <SkillCards name='Others' list={othersList} />
-      </SkillCardsContainer>
+      <SkillTypeOuter>
+        <SkillTypeContainer name='Backend' list={backendList} />
+        <SkillTypeContainer name='Frontend' list={frontendList} />
+        <SkillTypeContainer name='DB' list={dbList} />
+        <SkillTypeContainer name='Others' list={othersList} />
+      </SkillTypeOuter>
     </CommonSection>
   );
 }
 
 const TextArea = styled.p`
+  font-size: 1.2rem;
   margin: 0 auto 20px;
   width: 680px;
 `;
 
-const SkillCardsContainer = styled.div`
+const SkillTypeOuter = styled.div`
   align-items: stretch;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
   margin: auto;
-  max-width: 765px;
+  max-width: 762px;
 `;
 

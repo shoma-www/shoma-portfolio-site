@@ -28,7 +28,6 @@ const SkillTitleOuter = styled.div`
   background-color: ${Color.SkillThema};
   height: 44px;
   text-align: center;
-  width: 100%;
 `;
 
 const SkillTitle = styled.p`

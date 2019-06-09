@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/parts/header';
 import {createGlobalStyle} from 'styled-components';
 import Observer from 'react-intersection-observer';
@@ -19,52 +19,44 @@ const NavItems = [
   {name: 'Contact', url: '#contact'},
 ];
 
-class TestPage extends React.Component {
-  state = {
-    visibility: false,
+export default function() {
+  const [visibility, setVisibility] = useState(false);
+
+  const handleView = e => {
+    setVisibility(!e);
   };
 
-  handleView = e => {
-    this.setState({
-      visibility: !e,
-    });
-  };
+  const title = 'Shoma\'s Portfolio';
+  const subTitele = 'やる気はいつも遅刻気味';
 
-  render() {
-    const { visibility } = this.state;
-    const title = 'Shoma\'s Portfolio';
+  return (
+    <>
+      <GlobalStyles/>
+      <Header
+        navItems={NavItems}
+        isFixed={false}
+      />
+      <Header
+        navItems={NavItems}
+        isVisible={visibility ? 'open' : 'closed'}
+      />
 
-    return (
-      <>
-        <GlobalStyles/>
-        <Header
-          navItems={NavItems}
-          isFixed={false}
-        />
-        <Header
-          title={title}
-          navItems={NavItems}
-          isVisible={visibility ? 'open' : 'closed'}
-        />
+      <Observer onChange={handleView}>
+        <TopSection title={title} subTitele={subTitele} />
+      </Observer>
 
-        <Observer onChange={this.handleView}>
-          <TopSection title={title} subTitele={'やる気はいつも遅刻気味'} />
-        </Observer>
+      <div style={{margin: '1px'}} />
 
-        <div style={{margin: '1px'}} />
-
+      <div style={{width: '100vw'}}>
         <AboutSection />
         <SkillSection />
         <WorkSection />
         <ContactSection />
         <FooterSection />
-      </>
-    );
-  }
+      </div>
+    </>
+  );
 }
-
-export default TestPage;
-
 
 const GlobalStyles = createGlobalStyle`
   html {
