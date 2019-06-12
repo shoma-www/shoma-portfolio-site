@@ -47,18 +47,19 @@ const TopFadeIn = posed.div({
 
 const Header = styled(TopFadeIn)`
   color: ${Color.Thema};
-  background-color: rgba(255,255,255,.8);
   height: 50px;
   width: 100vw;
   z-index: 10;
   ${props =>
     props.isFixed ?
       css`
+        background-color: rgba(255,255,255,.8);
         box-shadow: 0 5px 5px rgba(0,0,0,0.2);
         position: fixed;
         top: 0;
       `:
       css`
+        background-color: rgba(255,255,255,1);
         position: absolute;
         top: 0;
       `};

@@ -15,9 +15,9 @@ export default function ({children, onClick, isZoomed}) {
     <ModalBackContainer pose={pose} onClick={onClick}>
       {(isZoomed)&&<ProhibitedScroll />}
       <ModalWindow onClick={stopEvent}>
-        <Close name='close' onClick={onClick} />
         {children}
       </ModalWindow>
+      <Close name='close' onClick={onClick} />
     </ModalBackContainer>
   );
 }
@@ -77,9 +77,9 @@ const ModalWindow = styled(ModalMotion)`
 `;
 
 const Close = styled(Icon)`
-  color: grey;
+  color: white;
   cursor: pointer;
-  left: 30px;
-  position: relative;
-  top: -25px;
+  position: fixed;
+  right: 20px;
+  top: 10px;
 `;
