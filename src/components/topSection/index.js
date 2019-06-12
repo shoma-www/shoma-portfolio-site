@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { graphql, StaticQuery } from 'gatsby';
+import React from './node_modules/react';
+import styled from './node_modules/styled-components';
+import { graphql, StaticQuery } from './node_modules/gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Color from '../../const/color';
 import Font from '../../const/font';
