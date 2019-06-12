@@ -3,12 +3,12 @@ import Header from '../components/parts/header';
 import {createGlobalStyle} from 'styled-components';
 import Observer from 'react-intersection-observer';
 import Color from '../const/color';
-import TopSection from '../components/topSection';
-import AboutSection from '../components/aboutSection';
-import ContactSection from '../components/contactSection';
-import SkillSection from '../components/skillSection';
+import TopSection from '../components/topsection';
+import AboutSection from '../components/aboutsection';
+import ContactSection from '../components/contactsection';
+import SkillSection from '../components/skillsection';
 import WorkSection from '../components/worksection';
-import FooterSection from '../components/footerSection';
+import FooterSection from '../components/footersection';
 
 const NavItems = [
   {name: 'Home', url: '#top'},
