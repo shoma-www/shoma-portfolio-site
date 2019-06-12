@@ -1,5 +1,5 @@
 ---
-path: "/hello-world"
+path: "/blog/hello-world"
 # necessary
 date: 2019-02-25T21:55:00.0000
 title: "My First Gatsby Post"

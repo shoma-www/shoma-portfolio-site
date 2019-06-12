@@ -26,19 +26,20 @@ const WorkValues = [
     Gatsby自体初めてでしたが、それ以上にデザインとそのスタイルの当て方にかなり苦労しました。
     ブログ機能を実装しなければ。。。</>),
   },
-  {
-    title: 'hogefuga',
-    samnail: 'WorkDetail_NoImage.png',
-    details: [
-      'WorkDetail_NoImage.png',
-    ],
-    icons: [
-      {
-      },
-    ],
-    language: 'fugafugafugafuga',
-    explain: () => <>hogehogehohgeohogehogehogehogehoge</>,
-  },
+  // テスト用
+  // {
+  //   title: 'hogefuga',
+  //   samnail: 'WorkDetail_NoImage.png',
+  //   details: [
+  //     'WorkDetail_NoImage.png',
+  //   ],
+  //   icons: [
+  //     {
+  //     },
+  //   ],
+  //   language: 'fugafugafugafuga',
+  //   explain: () => <>hogehogehohgeohogehogehogehogehoge</>,
+  // },
 ];
 
 export default () => {
