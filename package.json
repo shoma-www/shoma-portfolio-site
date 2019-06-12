@@ -51,10 +51,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/shoma-www/shoma-portfolio-site"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/shoma-www/shoma-portfolio-site/issues"
   },
   "devDependencies": {
     "eslint-plugin-react": "^7.12.4",
