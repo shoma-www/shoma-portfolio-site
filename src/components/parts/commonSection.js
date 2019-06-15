@@ -21,7 +21,7 @@ const CommonSection = styled.section`
   margin: 0 auto;
 
 @media screen and (max-width: 767px){
-  width: 480px;
+  max-width: 480px;
 }
   .header {
     font-family: ${Font.yuGothic};
