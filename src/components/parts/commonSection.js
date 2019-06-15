@@ -20,6 +20,9 @@ const CommonSection = styled.section`
   padding: 50px 40px 20px;
   margin: 0 auto;
 
+@media screen and (max-width: 767px){
+  width: 480px;
+}
   .header {
     font-family: ${Font.yuGothic};
     font-size: 3rem;
