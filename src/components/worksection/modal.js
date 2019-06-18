@@ -74,6 +74,10 @@ const ModalWindow = styled(ModalMotion)`
     margin-left: auto;
     margin-bottom: -20px;
   }
+  @media screen and (max-width: 767px){
+    left: 0px;
+    width: 100vw;
+  }
 `;
 
 const Close = styled(Icon)`

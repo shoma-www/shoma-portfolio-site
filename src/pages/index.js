@@ -47,13 +47,11 @@ export default function() {
 
       <div style={{margin: '1px'}} />
 
-      <div style={{width: '100vw'}}>
-        <AboutSection />
-        <SkillSection />
-        <WorkSection />
-        <ContactSection />
-        <FooterSection />
-      </div>
+      <AboutSection />
+      <SkillSection />
+      <WorkSection />
+      <ContactSection />
+      <FooterSection />
     </>
   );
 }
@@ -61,6 +59,7 @@ export default function() {
 const GlobalStyles = createGlobalStyle`
   html {
     scroll-behavior: smooth;
+    width: 100vw;
   }
   body {
     background-color: ${Color.BackThemae};

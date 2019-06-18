@@ -17,12 +17,12 @@ const CommonSection = styled.section`
   font-family: ${Font.yuGothic};
   font-size: 1.4rem;
   width: 980px;
-  padding: 50px 40px 20px;
+  padding: 50px 0px 20px;
   margin: 0 auto;
 
-@media screen and (max-width: 767px){
-  max-width: 480px;
-}
+  @media screen and (max-width: 767px){
+    width: 100vw;
+  }
   .header {
     font-family: ${Font.yuGothic};
     font-size: 3rem;
