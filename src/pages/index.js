@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
 import Header from '../components/parts/header';
 import {createGlobalStyle} from 'styled-components';
 import Observer from 'react-intersection-observer';
@@ -19,7 +21,7 @@ const NavItems = [
   {name: 'Contact', url: '#contact'},
 ];
 
-export default function() {
+export default function({ data }) {
   const [visibility, setVisibility] = useState(false);
 
   const handleView = e => {
@@ -31,6 +33,11 @@ export default function() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data.site.siteMetadata.title}</title>
+        <meta name="description" content={data.site.siteMetadata.description} />
+      </Helmet>
       <GlobalStyles/>
       <Header
         navItems={NavItems}
@@ -63,5 +70,15 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: ${Color.BackThemae};
+  }
+`;
+
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
   }
 `;
